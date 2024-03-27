@@ -1,0 +1,22 @@
+{
+  "name": "voyage-slider",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "vite": "^5.2.6"
+  },
+  "dependencies": {
+    "gsap": "^3.12.5",
+    "imagesloaded": "^5.0.0"
+  }
+}
