@@ -4,130 +4,205 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Voyage Slider</title>
-        <link rel="stylesheet" href="./src/style.css" />
+
+        <!-- Fonts -->
+        <!-- <link
+            href="https://api.fontshare.com/v2/css?f[]=archivo@100,200,300,400,500,600,700,800,900&f[]=clash-display@200,300,400,500,600,700&display=swap"
+            rel="stylesheet"
+        /> -->
+
+        <link
+            rel="preload"
+            href="/fonts/archivo-var.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin
+        />
+        <link
+            rel="preload"
+            href="/fonts/clash-display-var.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin
+        />
+
+        <link rel="stylesheet" href="./src/app.css" />
     </head>
 
     <body>
         <div class="app">
-            <div class="cardList">
-                <button class="cardList__btn btn btn--left">
-                    <div class="icon">
-                        <svg>
-                            <use xlink:href="#arrow-left"></use>
-                        </svg>
-                    </div>
+            <div class="slider">
+                <button class="slider--btn slider--btn__prev">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
+                        <path d="m15 18-6-6 6-6" />
+                    </svg>
                 </button>
 
-                <div class="cards__wrapper">
-                    <div class="card current--card">
-                        <div class="card__image">
-                            <img src="images/scotland-mountains.jpg" alt="" />
-                        </div>
-                    </div>
+                <div class="slides__wrapper">
+                    <div class="slides">
+                        <!-- slide 1 -->
+                        <div class="slide__wrapper">
+                            <div class="slide" data-current>
+                                <div class="slide__inner">
+                                    <div class="slide--image__wrapper">
+                                        <img
+                                            class="slide--image"
+                                            src="/images/scotland-mountains.jpg"
+                                            alt="Image 1"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
 
-                    <div class="card next--card">
-                        <div class="card__image">
-                            <img src="images/machu-pichu.jpg" alt="" />
+                            <div class="slide-info" data-current>
+                                <div class="slide-info__inner">
+                                    <div class="slide-info--text__wrapper">
+                                        <div
+                                            data-title
+                                            class="slide-info--text"
+                                        >
+                                            <span>The Alps</span>
+                                        </div>
+                                        <div
+                                            data-subtitle
+                                            class="slide-info--text"
+                                        >
+                                            <span>Switzerland</span>
+                                        </div>
+                                        <div
+                                            data-description
+                                            class="slide-info--text"
+                                        >
+                                            <span
+                                                >The mountains are calling</span
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="card previous--card">
-                        <div class="card__image">
-                            <img src="images/chamonix.jpg" alt="" />
+                        <!-- slide 2 -->
+                        <div class="slide__wrapper">
+                            <div class="slide" data-next>
+                                <div class="slide__inner">
+                                    <div class="slide--image__wrapper">
+                                        <img
+                                            class="slide--image"
+                                            src="/images/chamonix.jpg"
+                                            alt="Image 1"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="slide-info">
+                                <div class="slide-info__inner">
+                                    <div class="slide-info--text__wrapper">
+                                        <div
+                                            data-title
+                                            class="slide-info--text"
+                                        >
+                                            <span>Machu Pichu</span>
+                                        </div>
+                                        <div
+                                            data-subtitle
+                                            class="slide-info--text"
+                                        >
+                                            <span>Peru</span>
+                                        </div>
+                                        <div
+                                            data-description
+                                            class="slide-info--text"
+                                        >
+                                            <span
+                                                >The mountains are calling</span
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- slide 3 -->
+                        <div class="slide__wrapper">
+                            <div class="slide" data-previous>
+                                <div class="slide__inner">
+                                    <div class="slide--image__wrapper">
+                                        <img
+                                            class="slide--image"
+                                            src="/images/machu-pichu.jpg"
+                                            alt="Image 1"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="slide-info">
+                                <div class="slide-info__inner">
+                                    <div class="slide-info--text__wrapper">
+                                        <div
+                                            data-title
+                                            class="slide-info--text"
+                                        >
+                                            <span>Highlands</span>
+                                        </div>
+                                        <div
+                                            data-subtitle
+                                            class="slide-info--text"
+                                        >
+                                            <span>Scotland</span>
+                                        </div>
+                                        <div
+                                            data-description
+                                            class="slide-info--text"
+                                        >
+                                            <span
+                                                >The mountains are calling</span
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <button class="cardList__btn btn btn--right">
-                    <div class="icon">
-                        <svg>
-                            <use xlink:href="#arrow-right"></use>
-                        </svg>
-                    </div>
+                <button class="slider--btn slider--btn__next">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
+                        <path d="m9 18 6-6-6-6" />
+                    </svg>
                 </button>
-            </div>
-
-            <div class="infoList">
-                <div class="info__wrapper">
-                    <div class="info current--info">
-                        <h1 class="text name">Scotland Mountains</h1>
-                        <h4 class="text location">UK</h4>
-                        <p class="text description">The nature!</p>
-                    </div>
-
-                    <div class="info next--info">
-                        <h1 class="text name">Machu Pichu</h1>
-                        <h4 class="text location">Peru</h4>
-                        <p class="text description">
-                            Adventure is never far away
-                        </p>
-                    </div>
-
-                    <div class="info previous--info">
-                        <h1 class="text name">Chamonix</h1>
-                        <h4 class="text location">France</h4>
-                        <p class="text description">
-                            Let your dreams come true
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="app__bg">
-                <div class="app__bg__image current--image">
-                    <img src="images/scotland-mountains.jpg" alt="" />
-                </div>
-                <div class="app__bg__image next--image">
-                    <img src="images/machu-pichu.jpg" alt="" />
-                </div>
-                <div class="app__bg__image previous--image">
-                    <img src="images/chamonix.jpg" alt="" />
-                </div>
             </div>
         </div>
 
-        <div class="loading__wrapper">
+        <!-- <div class="loading__wrapper">
             <div class="loader--text">Loading...</div>
             <div class="loader">
                 <span></span>
             </div>
-        </div>
+        </div> -->
 
-        <svg class="icons" style="display: none">
-            <symbol
-                id="arrow-left"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 512 512"
-            >
-                <polyline
-                    points="328 112 184 256 328 400"
-                    style="
-                        fill: none;
-                        stroke: #fff;
-                        stroke-linecap: round;
-                        stroke-linejoin: round;
-                        stroke-width: 48px;
-                    "
-                />
-            </symbol>
-            <symbol
-                id="arrow-right"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 512 512"
-            >
-                <polyline
-                    points="184 112 328 256 184 400"
-                    style="
-                        fill: none;
-                        stroke: #fff;
-                        stroke-linecap: round;
-                        stroke-linejoin: round;
-                        stroke-width: 48px;
-                    "
-                />
-            </symbol>
-        </svg>
-
-        <script type="module" src="./src/main.js"></script>
+        <script type="module" src="./src/app.js"></script>
     </body>
 </html>
