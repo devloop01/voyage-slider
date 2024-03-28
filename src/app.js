@@ -6,13 +6,11 @@ import { raf } from "./utils/Raf";
 
 const DEV = import.meta.env.MODE === "development";
 
-// if (DEV) {
-//   init();
-// } else {
-//   setup();
-// }
-
-setup();
+if (DEV) {
+  init();
+} else {
+  setup();
+}
 
 function init() {
   const loader = document.querySelector(".loader");
@@ -30,10 +28,9 @@ function init() {
 
   slides.forEach((slide, index) => {
     const slideInner = slide.querySelector(".slide__inner");
-    const slideInfoInner =
-      slideInfos[index].querySelector(".slide-info__inner");
+    const slideInfoInner = slideInfos[index].querySelector(".slide-info__inner");
 
-    tilt(slide, { target: [slideInner, slideInfoInner] });
+    // tilt(slide, { target: [slideInner, slideInfoInner] });
   });
 
   buttons.prev.addEventListener("click", swapCards("left"));
@@ -84,17 +81,13 @@ function swapCards(direction) {
     const slidePrevious = document.querySelector(".slide[data-previous]");
     const slideNext = document.querySelector(".slide[data-next]");
 
-    const slideWrapperCurrent = slideCurrent.parentElement;
-    const slideWrapperPrevious = slidePrevious.parentElement;
-    const slideWrapperNext = slideNext.parentElement;
-
-    const slideInfoCurrent = document.querySelector(
-      ".slide-info[data-current]",
-    );
-    const slideInfoPrevious = document.querySelector(
-      ".slide-info[data-previous]",
-    );
+    const slideInfoCurrent = document.querySelector(".slide-info[data-current]");
+    const slideInfoPrevious = document.querySelector(".slide-info[data-previous]");
     const slideInfoNext = document.querySelector(".slide-info[data-next]");
+
+    const slideBgCurrent = document.querySelector(".slide__bg[data-current]");
+    const slideBgPrevious = document.querySelector(".slide__bg[data-previous]");
+    const slideBgNext = document.querySelector(".slide__bg[data-next]");
 
     slideCurrent.removeAttribute("data-current");
     slidePrevious.removeAttribute("data-previous");
@@ -104,10 +97,14 @@ function swapCards(direction) {
     slideInfoPrevious.removeAttribute("data-previous");
     slideInfoNext.removeAttribute("data-next");
 
+    slideBgCurrent.removeAttribute("data-current");
+    slideBgPrevious.removeAttribute("data-previous");
+    slideBgNext.removeAttribute("data-next");
+
     if (direction === "right") {
-      slideWrapperNext.style.zIndex = "20";
-      slideWrapperCurrent.style.zIndex = "30";
-      slideWrapperPrevious.style.zIndex = "10";
+      slideNext.style.zIndex = "20";
+      slideCurrent.style.zIndex = "30";
+      slidePrevious.style.zIndex = "10";
 
       slideCurrent.setAttribute("data-previous", "");
       slidePrevious.setAttribute("data-next", "");
@@ -116,10 +113,14 @@ function swapCards(direction) {
       slideInfoCurrent.setAttribute("data-previous", "");
       slideInfoNext.setAttribute("data-current", "");
       slideInfoPrevious.setAttribute("data-next", "");
+
+      slideBgCurrent.setAttribute("data-previous", "");
+      slideBgNext.setAttribute("data-current", "");
+      slideBgPrevious.setAttribute("data-next", "");
     } else if (direction === "left") {
-      slideWrapperPrevious.style.zIndex = "20";
-      slideWrapperCurrent.style.zIndex = "30";
-      slideWrapperNext.style.zIndex = "10";
+      slidePrevious.style.zIndex = "20";
+      slideCurrent.style.zIndex = "30";
+      slideNext.style.zIndex = "10";
 
       slideCurrent.setAttribute("data-next", "");
       slidePrevious.setAttribute("data-current", "");
@@ -128,6 +129,10 @@ function swapCards(direction) {
       slideInfoCurrent.setAttribute("data-next", "");
       slideInfoPrevious.setAttribute("data-current", "");
       slideInfoNext.setAttribute("data-previous", "");
+
+      slideBgCurrent.setAttribute("data-next", "");
+      slideBgPrevious.setAttribute("data-current", "");
+      slideBgNext.setAttribute("data-previous", "");
     }
   };
 }

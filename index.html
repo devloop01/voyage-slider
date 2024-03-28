@@ -30,150 +30,148 @@
     </head>
 
     <body>
-        <div class="app">
-            <div class="slider">
-                <button class="slider--btn slider--btn__prev">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                    >
-                        <path d="m15 18-6-6 6-6" />
-                    </svg>
-                </button>
+        <div class="slider">
+            <button class="slider--btn slider--btn__prev">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                >
+                    <path d="m15 18-6-6 6-6" />
+                </svg>
+            </button>
 
-                <div class="slides__wrapper">
-                    <div class="slides">
-                        <!-- slide 1 -->
-                        <div class="slide__wrapper">
-                            <div class="slide" data-current>
-                                <div class="slide__inner">
-                                    <div class="slide--image__wrapper">
-                                        <img
-                                            class="slide--image"
-                                            src="/images/scotland-mountains.jpg"
-                                            alt="Image 1"
-                                        />
-                                    </div>
-                                </div>
+            <div class="slides__wrapper">
+                <div class="slides">
+                    <!-- slide 1 -->
+                    <div class="slide" data-current>
+                        <div class="slide__inner">
+                            <div class="slide--image__wrapper">
+                                <img
+                                    class="slide--image"
+                                    src="/images/scotland-mountains.jpg"
+                                    alt="Image 1"
+                                />
                             </div>
                         </div>
+                    </div>
+                    <div
+                        class="slide__bg"
+                        style="--bg: url(/images/scotland-mountains.jpg); --dir: 0"
+                        data-current
+                    ></div>
 
-                        <!-- slide 2 -->
-                        <div class="slide__wrapper">
-                            <div class="slide" data-next>
-                                <div class="slide__inner">
-                                    <div class="slide--image__wrapper">
-                                        <img
-                                            class="slide--image"
-                                            src="/images/chamonix.jpg"
-                                            alt="Image 1"
-                                        />
-                                    </div>
-                                </div>
+                    <!-- slide 2 -->
+                    <div class="slide" data-next>
+                        <div class="slide__inner">
+                            <div class="slide--image__wrapper">
+                                <img
+                                    class="slide--image"
+                                    src="/images/chamonix.jpg"
+                                    alt="Image 1"
+                                />
                             </div>
                         </div>
+                    </div>
+                    <div
+                        class="slide__bg"
+                        style="--bg: url(/images/chamonix.jpg); --dir: 1"
+                        data-next
+                    ></div>
 
-                        <!-- slide 3 -->
-                        <div class="slide__wrapper">
-                            <div class="slide" data-previous>
-                                <div class="slide__inner">
-                                    <div class="slide--image__wrapper">
-                                        <img
-                                            class="slide--image"
-                                            src="/images/machu-pichu.jpg"
-                                            alt="Image 1"
-                                        />
-                                    </div>
+                    <!-- slide 3 -->
+                    <div class="slide" data-previous>
+                        <div class="slide__inner">
+                            <div class="slide--image__wrapper">
+                                <img
+                                    class="slide--image"
+                                    src="/images/machu-pichu.jpg"
+                                    alt="Image 1"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="slide__bg"
+                        style="--bg: url(/images/machu-pichu.jpg); --dir: -1"
+                        data-previous
+                    ></div>
+                </div>
+                <div class="slides--infos">
+                    <!-- Slide Info 1 -->
+                    <div class="slide-info" data-current>
+                        <div class="slide-info__inner">
+                            <div class="slide-info--text__wrapper">
+                                <div data-title class="slide-info--text">
+                                    <span>The Alps</span>
+                                </div>
+                                <div data-subtitle class="slide-info--text">
+                                    <span>Switzerland</span>
+                                </div>
+                                <div data-description class="slide-info--text">
+                                    <span>The mountains are calling</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="slides--infos">
-                        <!-- Slide Info 1 -->
-                        <div class="slide-info" data-current>
-                            <div class="slide-info__inner">
-                                <div class="slide-info--text__wrapper">
-                                    <div data-title class="slide-info--text">
-                                        <span>The Alps</span>
-                                    </div>
-                                    <div data-subtitle class="slide-info--text">
-                                        <span>Switzerland</span>
-                                    </div>
-                                    <div
-                                        data-description
-                                        class="slide-info--text"
-                                    >
-                                        <span>The mountains are calling</span>
-                                    </div>
+
+                    <!-- Slide Info 2 -->
+                    <div class="slide-info" data-next>
+                        <div class="slide-info__inner">
+                            <div class="slide-info--text__wrapper">
+                                <div data-title class="slide-info--text">
+                                    <span>Machu Pichu</span>
+                                </div>
+                                <div data-subtitle class="slide-info--text">
+                                    <span>Peru</span>
+                                </div>
+                                <div data-description class="slide-info--text">
+                                    <span>The mountains are calling</span>
                                 </div>
                             </div>
                         </div>
+                    </div>
 
-                        <!-- Slide Info 2 -->
-                        <div class="slide-info" data-next>
-                            <div class="slide-info__inner">
-                                <div class="slide-info--text__wrapper">
-                                    <div data-title class="slide-info--text">
-                                        <span>Machu Pichu</span>
-                                    </div>
-                                    <div data-subtitle class="slide-info--text">
-                                        <span>Peru</span>
-                                    </div>
-                                    <div
-                                        data-description
-                                        class="slide-info--text"
-                                    >
-                                        <span>The mountains are calling</span>
-                                    </div>
+                    <!-- Slide Info 3 -->
+                    <div class="slide-info" data-previous>
+                        <div class="slide-info__inner">
+                            <div class="slide-info--text__wrapper">
+                                <div data-title class="slide-info--text">
+                                    <span>Highlands</span>
                                 </div>
-                            </div>
-                        </div>
-
-                        <!-- Slide Info 3 -->
-                        <div class="slide-info" data-previous>
-                            <div class="slide-info__inner">
-                                <div class="slide-info--text__wrapper">
-                                    <div data-title class="slide-info--text">
-                                        <span>Highlands</span>
-                                    </div>
-                                    <div data-subtitle class="slide-info--text">
-                                        <span>Scotland</span>
-                                    </div>
-                                    <div
-                                        data-description
-                                        class="slide-info--text"
-                                    >
-                                        <span>The mountains are calling</span>
-                                    </div>
+                                <div data-subtitle class="slide-info--text">
+                                    <span>Scotland</span>
+                                </div>
+                                <div data-description class="slide-info--text">
+                                    <span>The mountains are calling</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <button class="slider--btn slider--btn__next">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                    >
-                        <path d="m9 18 6-6-6-6" />
-                    </svg>
-                </button>
             </div>
+
+            <button class="slider--btn slider--btn__next">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                >
+                    <path d="m9 18 6-6-6-6" />
+                </svg>
+            </button>
         </div>
 
         <div class="loader">
