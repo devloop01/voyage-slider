@@ -1,5 +1,4 @@
 # voyage-slider
 
-## Screenshots
+https://github.com/devloop01/voyage-slider/assets/38714423/bc152899-9062-44ff-a46d-abb793c6c5a9
 
-![image](https://github.com/devloop01/voyage-slider/blob/master/screenshots/Screenshot%20from%202020-06-18%2010-39-26.png)
