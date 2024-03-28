@@ -311,7 +311,7 @@ button {
 
     &[data-title],
     &[data-subtitle] {
-        font-size: 2cqw;
+        font-size: min(3cqw, 2.4rem);
         font-weight: 800;
         letter-spacing: 0.2cqw;
         white-space: nowrap;
@@ -320,13 +320,13 @@ button {
 
     &[data-subtitle] {
         margin-left: 2cqw;
-        font-size: 1.6cqw;
+        font-size: min(2.2cqw, 1.8rem);
         font-weight: 600;
     }
 
     &[data-description] {
         margin-left: 1cqw;
-        font-size: 0.8cqw;
+        font-size: min(1.5cqw, 0.95rem);
         font-family: var(--font-archivo);
         font-weight: 300;
     }

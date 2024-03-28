@@ -33,8 +33,8 @@ function init() {
     tilt(slide, { target: [slideInner, slideInfoInner] });
   });
 
-  buttons.prev.addEventListener("click", change(1));
-  buttons.next.addEventListener("click", change(-1));
+  buttons.prev.addEventListener("click", change(-1));
+  buttons.next.addEventListener("click", change(1));
 }
 
 function setup() {
