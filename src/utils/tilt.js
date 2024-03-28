@@ -15,7 +15,11 @@ export function tilt(node, options) {
     init();
   };
 
-  function ticker() {
+  let rafId;
+
+  function ticker({ id }) {
+    rafId = id;
+
     rotDeg.current.lerp(rotDeg.target, lerpAmount);
     bgPos.current.lerp(bgPos.target, lerpAmount);
 
@@ -64,6 +68,7 @@ export function tilt(node, options) {
 
   const destroy = () => {
     removeListeners();
+    raf.remove(rafId);
   };
 
   init();
