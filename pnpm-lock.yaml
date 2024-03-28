@@ -5,9 +5,6 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
-  gsap:
-    specifier: ^3.12.5
-    version: 3.12.5
   imagesloaded:
     specifier: ^5.0.0
     version: 5.0.0
@@ -384,10 +381,6 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
-
-  /gsap@3.12.5:
-    resolution: {integrity: sha512-srBfnk4n+Oe/ZnMIOXt3gT605BX9x5+rh/prT2F1SsNJsU1XuMiP0E2aptW481OnonOGACZWBqseH5Z7csHxhQ==}
-    dev: false
 
   /imagesloaded@5.0.0:
     resolution: {integrity: sha512-/0JGSubc1MTCoDKVmonLHgbifBWHdyLkun+R/151E1c5n79hiSxcd7cB7mPXFgojYu8xnRZv7GYxzKoxW8BetQ==}

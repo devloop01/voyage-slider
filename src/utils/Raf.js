@@ -1,3 +1,5 @@
+import { genId } from "./index";
+
 export class Raf {
   constructor() {
     this.rafId = 0;
@@ -16,12 +18,16 @@ export class Raf {
   }
 
   raf() {
-    this.callbacks.forEach((callback) => callback());
+    this.callbacks.forEach(({ callback, id }) => callback({ id }));
     this.rafId = requestAnimationFrame(this.raf);
   }
 
-  add(callback) {
-    this.callbacks.push(callback);
+  add(callback, id) {
+    this.callbacks.push({ callback, id: id || genId() });
+  }
+
+  remove(id) {
+    this.callbacks = this.callbacks.filter((callback) => callback.id !== id);
   }
 }
 

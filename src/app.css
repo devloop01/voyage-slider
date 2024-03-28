@@ -127,7 +127,7 @@ button {
 }
 
 /* ------------------------------------------------ */
-/* -------------------- SLIDE -------------------- */
+/* -------------------- SLIDE --------------------- */
 /* ------------------------------------------------ */
 
 .slide__wrapper {
@@ -319,5 +319,30 @@ button {
         font-size: 0.95rem;
         font-family: var(--font-archivo);
         font-weight: 300;
+    }
+}
+
+/* ------------------------------------------------ */
+/* -------------------- LOADER --------------------- */
+/* ------------------------------------------------ */
+
+.loader {
+    position: fixed;
+    inset: 0;
+
+    display: grid;
+    place-items: center;
+
+    background: #000;
+    z-index: 1000;
+
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+
+    .loader__text {
+        font-family: var(--font-clash-display);
+        font-size: clamp(2rem, 2vw, 5rem);
+        font-weight: 800;
+        color: #fff;
     }
 }
