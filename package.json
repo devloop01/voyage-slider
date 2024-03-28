@@ -1,0 +1,21 @@
+{
+  "name": "voyage-slider",
+  "description": "Voyage Slider inspired from dribbble",
+  "author": "Sikriti Dakua",
+  "keywords": ["slider", "carousel"],
+  "license": "ISC",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "main.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.2.6"
+  },
+  "dependencies": {
+    "imagesloaded": "^5.0.0"
+  }
+}
