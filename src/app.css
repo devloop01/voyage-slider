@@ -77,24 +77,6 @@ button {
     align-items: center;
 }
 
-.slides__wrapper {
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-
-.slides {
-    position: relative;
-    width: 100%;
-    height: 100%;
-
-    display: grid;
-    place-items: center;
-    & > * {
-        grid-area: 1 / -1;
-    }
-}
-
 .slider--btn {
     --size: 40px;
 
@@ -116,6 +98,34 @@ button {
     }
 }
 
+.slides__wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    place-items: center;
+
+    & > * {
+        grid-area: 1 / -1;
+    }
+}
+
+.slides,
+.slides--infos {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+
+    display: grid;
+    place-items: center;
+    & > * {
+        grid-area: 1 / -1;
+    }
+}
+
 /* ------------------------------------------------ */
 /* -------------------- SLIDE -------------------- */
 /* ------------------------------------------------ */
@@ -128,18 +138,6 @@ button {
 
     & > * {
         grid-area: 1 / -1;
-    }
-
-    &:has(.slide[data-current]) {
-        z-index: 30;
-    }
-
-    &:has(.slide[data-next]) {
-        z-index: 20;
-    }
-
-    &:has(.slide[data-previous]) {
-        z-index: 10;
     }
 }
 
@@ -171,12 +169,12 @@ button {
 }
 
 .slide[data-next] {
-    --slide-tx: calc(1 * var(--slide-width) * 1);
+    --slide-tx: calc(1 * var(--slide-width) * 1.05);
     --slide-rotY: -45deg;
 }
 
 .slide[data-previous] {
-    --slide-tx: calc(-1 * var(--slide-width) * 1);
+    --slide-tx: calc(-1 * var(--slide-width) * 1.05);
     --slide-rotY: 45deg;
 }
 
@@ -212,7 +210,6 @@ button {
     top: calc(var(--padding) / 2);
     width: calc(100% - var(--padding));
     height: calc(100% - var(--padding));
-    pointer-events: none;
     transform-style: preserve-3d;
     transform: rotateX(var(--rotX)) rotateY(var(--rotY));
 }
@@ -243,9 +240,8 @@ button {
     --padding: 0px;
 
     position: relative;
-    pointer-events: none;
     width: var(--slide-width);
-    height: auto;
+    height: 100%;
     aspect-ratio: var(--slide-aspect);
     user-select: none;
     perspective: 800px;
@@ -274,7 +270,6 @@ button {
     top: calc(var(--padding) / 2);
     width: calc(100% - var(--padding));
     height: calc(100% - var(--padding));
-    pointer-events: none;
     transform-style: preserve-3d;
     transform: rotateX(var(--rotX)) rotateY(var(--rotY));
 }
